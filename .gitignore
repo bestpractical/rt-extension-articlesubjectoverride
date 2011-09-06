@@ -10,3 +10,4 @@ pod2htm*.tmp
 README
 *.bak
 *.swp
+/MYMETA.*
