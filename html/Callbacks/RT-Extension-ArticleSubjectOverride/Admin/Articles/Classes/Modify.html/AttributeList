@@ -47,7 +47,16 @@
 %# END BPS TAGGED BLOCK }}}
 <%INIT>
 push @{$Attributes},'SubjectOverride';
+
+if ($ARGSRef->{SubjectOverride}) {
+    $ARGSRef->{SubjectOverride} = $m->comp('/Widgets/Form/Select:Process',
+        Arguments => $ARGSRef,
+        Name      => 'SubjectOverride',
+        DefaultValue => (''),
+    );
+}
 </%INIT>
 <%ARGS>
 $Attributes => undef
+$ARGSRef => undef
 </%ARGS>
