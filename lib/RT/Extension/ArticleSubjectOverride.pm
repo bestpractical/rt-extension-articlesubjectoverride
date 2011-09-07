@@ -32,6 +32,13 @@ By default, this will only be available on ticket Update with the normal Article
 If you'd like to use it on Create, you'll need to enable the config option for Articles
 on Create.
 
+=item On RT 4.0.2, you need to apply the included patch to add two necessary callbacks
+
+    $ patch -d /opt/rt4 -p1 < patches/0001-Add-two-new-callbacks.patch
+    patching file share/html/Admin/Articles/Classes/Modify.html
+
+This patch is unnecessary for RT 4.0.3 and higher.
+
 =item Clear your mason cache
 
     rm -rf /opt/rt4/var/mason_data/obj
