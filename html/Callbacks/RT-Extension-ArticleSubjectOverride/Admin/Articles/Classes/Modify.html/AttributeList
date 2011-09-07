@@ -46,6 +46,8 @@
 %#
 %# END BPS TAGGED BLOCK }}}
 <%INIT>
-push @{$ARGS{Attributes}},'SubjectOverride';
-return;
+push @{$Attributes},'SubjectOverride';
 </%INIT>
+<%ARGS>
+$Attributes => undef
+</%ARGS>
