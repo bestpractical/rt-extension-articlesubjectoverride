@@ -47,6 +47,16 @@ This patch is unnecessary for RT 4.0.3 and higher.
 
 =back
 
+=head1 USAGE
+
+This extension will add a new dropdown to class basics page. It allows
+you to choose one of your article custom fields and have it override the
+subject. When used in a reply, this affects the subject of the
+transaction, not the ticket. When used on ticket creation, it changes
+the subject of the ticket. If you do not want this subject custom field
+to appear in the body of your Article, use the standard class checkboxes
+to avoid including it.
+
 =head1 AUTHOR
 
 Kevin Falcone <falcone@bestpractical.com>
