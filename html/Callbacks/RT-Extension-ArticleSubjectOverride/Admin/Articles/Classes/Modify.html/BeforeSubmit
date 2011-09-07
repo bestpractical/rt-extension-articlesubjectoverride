@@ -47,7 +47,7 @@
 %# END BPS TAGGED BLOCK }}}
 % if ( @$subject_cfs ) {
 <h3>Change email subject:</h3>
-<p><&|/l&>If a Custom Field is selected, the Subject of your outgoing email will be overridden by this article.</&></p>
+<p><&|/l&>If a custom field is selected, the Subject of your outgoing email will be overridden by this article.</&></p>
 
 <& /Widgets/Form/Select,
     Name         => 'SubjectOverride',
