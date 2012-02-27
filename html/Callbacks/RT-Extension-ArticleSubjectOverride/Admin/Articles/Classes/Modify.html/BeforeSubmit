@@ -54,18 +54,19 @@
     DefaultLabel => 'No Subject Override',
     Values       => $subject_cfs,
     ValuesLabel  => $subject_cf_labels,
-    CurrentValue => $ClassObj->SubjectOverride,
+    CurrentValue => ($ClassObj ? $ClassObj->SubjectOverride : undef),
 &>
 % }
 <%INIT>
 my $subject_cfs = [];
 my $subject_cf_labels = {};
 
-while ( my $cf= $CustomFields->Next ) {
-    push @$subject_cfs,$cf->Id;
-    $subject_cf_labels->{$cf->Id} = $cf->Name;
+if ($CustomFields) {
+    while ( my $cf= $CustomFields->Next ) {
+        push @$subject_cfs,$cf->Id;
+        $subject_cf_labels->{$cf->Id} = $cf->Name;
+    }
 }
-
 </%INIT>
 <%ARGS>
 $CustomFields => undef
